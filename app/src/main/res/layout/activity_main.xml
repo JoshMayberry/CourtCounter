@@ -1,18 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center_horizontal"
+        android:padding="4dp"
+        android:text="Team A"
+        />
+    <TextView
+        android:id="@+id/teamA_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:gravity="center_horizontal"
+        android:text="0"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/teamA_add3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:onClick="onTeamA_addPoints"
+        android:text="+3 Points"
+        android:textAllCaps="true"
+        />
+    <Button
+        android:id="@+id/teamA_add2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:onClick="onTeamA_addPoints"
+        android:text="+2 Points"
+        android:textAllCaps="true"
+        />
+    <Button
+        android:id="@+id/teamA_add1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:onClick="onTeamA_addPoints"
+        android:text="Free Throw"
+        android:textAllCaps="true"
+        />
+
+</LinearLayout>
