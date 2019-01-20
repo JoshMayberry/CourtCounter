@@ -5,6 +5,6 @@
     <string name="add3">+3 Points</string>
     <string name="teamA_name">Team A</string>
     <string name="teamB_name">Team B</string>
-    <string name="error">ERROR</string>
+    <string name="error">N/A</string>
     <string name="reset">Reset</string>
 </resources>
