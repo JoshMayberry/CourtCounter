@@ -1,55 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:orientation="vertical"
     >
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:padding="4dp"
-        android:text="Team A"
-        />
-    <TextView
-        android:id="@+id/teamA_score"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="4dp"
-        android:gravity="center_horizontal"
-        android:text="0"
-        />
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:text="@string/teamA_name"
+                style="@style/TeamName"
+                />
+            <TextView
+                android:id="@+id/teamA_score"
+                style="@style/TeamScore"
+                />
+            <Button
+                android:id="@+id/teamA_add3"
+                android:text="@string/add3"
+                style="@style/ScoreButton"
+                android:onClick="onTeamA_addPoints"
+                />
+            <Button
+                android:id="@+id/teamA_add2"
+                android:text="@string/add2"
+                style="@style/ScoreButton"
+                android:onClick="onTeamA_addPoints"
+                />
+            <Button
+                android:id="@+id/teamA_add1"
+                android:text="@string/add1"
+                style="@style/ScoreButton"
+                android:onClick="onTeamA_addPoints"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:text="@string/teamB_name"
+                style="@style/TeamName"
+                />
+            <TextView
+                android:id="@+id/teamB_score"
+                style="@style/TeamScore"
+                />
+            <Button
+                android:id="@+id/teamB_add3"
+                android:text="@string/add3"
+                style="@style/ScoreButton"
+                android:onClick="onTeamB_addPoints"
+                />
+            <Button
+                android:id="@+id/teamB_add2"
+                android:text="@string/add2"
+                style="@style/ScoreButton"
+                android:onClick="onTeamB_addPoints"
+                />
+            <Button
+                android:id="@+id/teamB_add1"
+                android:text="@string/add1"
+                style="@style/ScoreButton"
+                android:onClick="onTeamB_addPoints"
+                />
+        </LinearLayout>
+    </LinearLayout>
 
     <Button
-        android:id="@+id/teamA_add3"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="6dp"
-        android:onClick="onTeamA_addPoints"
-        android:text="+3 Points"
-        android:textAllCaps="true"
-        />
-    <Button
-        android:id="@+id/teamA_add2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="6dp"
-        android:onClick="onTeamA_addPoints"
-        android:text="+2 Points"
-        android:textAllCaps="true"
-        />
-    <Button
-        android:id="@+id/teamA_add1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="6dp"
-        android:onClick="onTeamA_addPoints"
-        android:text="Free Throw"
-        android:textAllCaps="true"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/reset"
+        android:onClick="onReset"
         />
 
 </LinearLayout>
